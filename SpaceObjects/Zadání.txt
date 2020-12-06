@@ -1,0 +1,7 @@
+ListView
+Termín: 10. prosinec 2020 23:59
+Pokyny
+Vytvořte aplikaci, která bude zobrazovat informace o tělesech naší sluneční soustavy. 
+Umožněte vkládání informace o nových asteroidech. 
+Navrhněte strukturu spravovaných dat a vytvořte aplikaci pomocí elementů ListView, ContentPage a NavigationPage.
+Zasílejte odkaz na Vaši veřejnou github repository.

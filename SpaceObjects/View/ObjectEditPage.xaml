@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SpaceObjects.ObjectEditPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="DarkGray">
+                <Label Text="Editace objektu:" FontSize="25" FontAttributes="Bold" TextColor="White" Margin="5,10"/>
+            </Frame>
+            <Entry Placeholder="Jméno" HorizontalOptions="CenterAndExpand" Text="{Binding Name}" FontSize="20" />
+            <Entry Placeholder="Typ" HorizontalOptions="CenterAndExpand" Text="{Binding Type}" FontSize="20"/>
+            <Label Margin="10,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Možnosti: " FontAttributes="Bold" FontSize="14"/>
+                        <Span Text="star, planet, exoplanet, moon, asteroid, meteorid, comet, orbiter, space_probe, space_station"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Entry Placeholder="Stáří" HorizontalOptions="CenterAndExpand" Text="{Binding Age}" FontSize="20"/>
+            <Button Text="Uložit" VerticalOptions="End" Clicked="Save_Button_Clicked" FontSize="20" Margin="20" Padding="5,20"/>
+            <Button Text="Smazat" VerticalOptions="End" Clicked="Delete_Button_Clicked" FontSize="20" Margin="20" Padding="5,20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

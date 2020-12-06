@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SpaceObjects.ListViewPageSpaceObjects"
+             Background="DimGray" >
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="https://icon-library.com/images/xamarin-icon/xamarin-icon-17.jpg" />
+        <ToolbarItem Text="Vesmírná tělesa"/>
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout>
+        <ListView x:Name="MyListView"
+            ItemTapped="Handle_ItemTapped"
+            BackgroundColor="DimGray"
+            CachingStrategy="RecycleElement"
+            ItemsSource="{Binding AllObjects}"
+            Margin="5, 10"
+            HasUnevenRows="True">
+
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="https://static.thenounproject.com/png/7537-200.png" Margin="20,0,20,0" Aspect="AspectFit" HeightRequest="45" />
+                    <Label Text="Tělesa:" FontSize="25" FontAttributes="Bold" Margin="5, 20" TextColor="#FFFFFF"/>
+                </StackLayout>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame BackgroundColor="DimGray" Margin="5,15">
+                            <StackLayout Margin="5,10">
+                                <Label Text="{Binding Name}" TextColor="Aqua" FontSize="20" FontAttributes="Bold"/>
+                                <Label Text="{Binding Type, StringFormat='Typ: {0}'}" TextColor="#A1ACAF"/>
+                                <Label Text="{Binding Age, StringFormat='Stáří: {0:N0} let'}" TextColor="Ivory" />
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+</ContentPage>
