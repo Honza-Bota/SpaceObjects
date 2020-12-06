@@ -7,19 +7,25 @@
             <Frame BackgroundColor="DarkGray">
                 <Label Text="Editace objektu:" FontSize="25" FontAttributes="Bold" TextColor="White" Margin="5,10"/>
             </Frame>
-            <Entry Placeholder="Jméno" HorizontalOptions="CenterAndExpand" Text="{Binding Name}" FontSize="20" />
-            <Entry Placeholder="Typ" HorizontalOptions="CenterAndExpand" Text="{Binding Type}" FontSize="20"/>
-            <Label Margin="10,0">
+            <Frame BackgroundColor="#827E7E" Margin="8,20,8,0">
+                <StackLayout>
+               <Entry Placeholder="Jméno" HorizontalOptions="FillAndExpand" Text="{Binding Name}" FontSize="20" />
+                    <Entry Placeholder="Typ" HorizontalOptions="FillAndExpand" Text="{Binding Type}" FontSize="20"/>
+            <Label Margin="10,-10,10,5">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Možnosti: " FontAttributes="Bold" FontSize="14"/>
-                        <Span Text="star, planet, exoplanet, moon, asteroid, meteorid, comet, orbiter, space_probe, space_station"/>
+                        <Span Text="Možnosti: " FontAttributes="Bold" FontSize="10"/>
+                        <Span Text="star, planet, exoplanet, moon, asteroid, meteorid, comet, orbiter, space_probe, space_station" FontSize="8"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Entry Placeholder="Stáří" HorizontalOptions="CenterAndExpand" Text="{Binding Age}" FontSize="20"/>
-            <Button Text="Uložit" VerticalOptions="End" Clicked="Save_Button_Clicked" FontSize="20" Margin="20" Padding="5,20"/>
-            <Button Text="Smazat" VerticalOptions="End" Clicked="Delete_Button_Clicked" FontSize="20" Margin="20" Padding="5,20"/>
+                    <Entry Placeholder="Stáří" HorizontalOptions="FillAndExpand" Text="{Binding Age}" FontSize="20"/>
+                </StackLayout>
+            </Frame>
+            
+            
+            <Button Text="Uložit" VerticalOptions="End" Clicked="Save_Button_Clicked" FontSize="20" Margin="20,20,20,0" Padding="5,10" BackgroundColor="ForestGreen"/>
+            <Button Text="Smazat" VerticalOptions="End" Clicked="Delete_Button_Clicked" FontSize="20" Margin="20,0,20,20" Padding="5,10" BackgroundColor="DarkRed"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -97,7 +97,8 @@ namespace SpaceObjects
 
         private void Delete_Button_Clicked(object sender, EventArgs e)
         {
-
+            oCollection.Remove((BindingContext as PageViewModel).ToObject());
+            Application.Current.MainPage.Navigation.PopAsync();
         }
     }
 }
